@@ -1,4 +1,5 @@
 import random
+import sys
 from time import sleep
 
 RED = "\033[31m"
@@ -37,7 +38,7 @@ def game():
                     user = int(input(f"Adivina un número del 1 al 100: "))
                 except ValueError:
                     print("Ingrese por favor solo números")
-
+        
                 if user > number:
                     print("Demasiado alto")
                 elif user < number:
@@ -45,6 +46,10 @@ def game():
                 elif user == number:
                     print(f"Felicidades has encontrado el número {number}, en {trys} intentos")
                     break
+        elif question == "no" or question == "no ":
+            print("Operación cancelada")
+            sleep(1)
+            sys.exit()
 
 if __name__ == '__main__':
     game()
