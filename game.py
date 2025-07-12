@@ -30,11 +30,21 @@ def game():
         if enter == "adivinanzas":
             print("\nGenerando el juego....\n")
             sleep(1)
-            random.randint(1, 100)
-            intentos = 0
+            number = random.randint(1, 100)
+            trys = 0
             while True:
                 try:
                     user = int(input(f"Adivina un número del 1 al 100: "))
                 except ValueError:
-                    pass
-                
+                    print("Ingrese por favor solo números")
+
+                if user > number:
+                    print("Demasiado alto")
+                elif user < number:
+                    print("Demasiado bajo")
+                elif user == number:
+                    print(f"Felicidades has encontrado el número {number}, en {trys} intentos")
+                    break
+
+if __name__ == '__main__':
+    game()
