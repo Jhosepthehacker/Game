@@ -38,7 +38,8 @@ def game():
                     user = int(input(f"Adivina un número del 1 al 100: "))
                 except ValueError:
                     print("Ingrese por favor solo números")
-        
+                trys += 1
+                
                 if user > number:
                     print("Demasiado alto")
                 elif user < number:
