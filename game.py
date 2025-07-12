@@ -8,9 +8,9 @@ BLUE = "\033[34m"
 RESET = "\033[0m"
 
 options = [f"######################",
-           f"{GREEN} Adivinanza    ",
-           f"{RED}   Combate       ",
-           f"######################"
+    GREEN + "       Adivinanza     ",
+      RED + "       Combate        ",
+    RESET + "######################"
           ]
 
 def game():
